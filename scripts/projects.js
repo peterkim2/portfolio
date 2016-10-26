@@ -7,6 +7,7 @@ function Project (options) {
   this.authorUrl = options.authorUrl;
   this.publishedOn = options.publishedOn;
   this.body = options.body;
+  this.image = options.image;
 };
 
 Project.prototype.toHtml = function() {
@@ -16,6 +17,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('a').attr('href', this.authorUrl);
   $newProject.find('h1').text(this.title);
   $newProject.find('section').html(this.body);
+  $newProject.find('img').attr('src', this.image);
   $newProject.find('time').text(this.publishedOn);
   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
   $newProject.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');

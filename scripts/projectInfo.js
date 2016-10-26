@@ -2,6 +2,7 @@ var projectInfo = [
   {
     title:       'My Latest Project',
     category:    'projects',
+    image:       'images/project-image-1.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-11-05',
@@ -10,6 +11,7 @@ var projectInfo = [
   {
     title:       'Another Project',
     category:    'projects',
+    image:       'images/project-image-2.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-11-04',
@@ -18,6 +20,7 @@ var projectInfo = [
   {
     title:       'Cat Project',
     category:    'fun',
+    image:       'images/project-image-3.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-11-03',
@@ -26,6 +29,7 @@ var projectInfo = [
   {
     title:       'Cheese Project',
     category:    'fun',
+    image:       'images/project-image-4.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-11-02',
@@ -34,6 +38,7 @@ var projectInfo = [
   {
     title:       'Startup Project',
     category:    'business',
+    image:       'images/project-image-5.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-11-01',
@@ -42,6 +47,7 @@ var projectInfo = [
   {
     title:       'Project Title Here',
     category:    'projects',
+    image:       'images/project-image-6.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-10-31',
@@ -50,6 +56,7 @@ var projectInfo = [
   {
     title:       'The Fun Project',
     category:    'projects',
+    image:       'images/project-image-1.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-10-30',
@@ -58,6 +65,7 @@ var projectInfo = [
   {
     title:       'My First Project',
     category:    'projects',
+    image:       'images/project-image-2.jpg',
     author:      'Peter Kim',
     authorUrl:   'https://twitter.com/PeterKimSays',
     publishedOn: '2015-10-29',
