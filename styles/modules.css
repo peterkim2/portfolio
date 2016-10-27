@@ -99,7 +99,12 @@
   .footer-ul {
     display: inline-block;
   }
+  .feature-image {
+    max-width: 40%;
+  }
 }
+
+
 /*@media screen and (min-width:425px) {
   .profile-image {
     max-width: 30%;
