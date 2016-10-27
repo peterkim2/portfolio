@@ -1,5 +1,5 @@
 .site-header {
-  background: #4286f4;
+  background: #4277ce;
 }
 
 .heading-group-h1 {
@@ -76,6 +76,9 @@
   background-color: #dcdfe5;
 }
 
+.project-header {
+  background-image: ;
+}
 @media screen and (min-width: 800px) {
   .icon-menu {
     display: none;
