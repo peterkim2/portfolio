@@ -72,6 +72,10 @@
   padding-top: 1.5em;
 }*/
 
+.tab-content {
+  background-color: #dcdfe5;
+}
+
 @media screen and (min-width: 800px) {
   .icon-menu {
     display: none;
@@ -83,7 +87,7 @@
   .main-nav ul {
     display: inline-block;
     padding-top: 5.5em;
-    margin: 0;
+    margin: 0 0 .7em 0;
   }
   .main-nav li {
     display: inline;

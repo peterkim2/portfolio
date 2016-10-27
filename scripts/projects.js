@@ -13,8 +13,8 @@ function Project (options) {
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.attr('data-category', this.category);
-  $newProject.find('a').text(this.author);
-  $newProject.find('a').attr('href', this.authorUrl);
+  $newProject.find('a.author-info').text(this.author);
+  $newProject.find('a.authro-info').attr('href', this.authorUrl);
   $newProject.find('h1').text(this.title);
   $newProject.find('section').html(this.body);
   $newProject.find('img').attr('src', this.image);
