@@ -10,10 +10,10 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setPreview = function() {
-  $('.article-body *:nth-of-type(n+1)').hide();
+  $('.article-body *:nth-of-type(n+2)').hide();
   $('.view-more').on('click', function(event){
     event.preventDefault();
-    $(this).parent().find('.article-body *:nth-of-type(n+1)').fadeIn();
+    $(this).parent().find('.article-body *:nth-of-type(n+2)').fadeIn();
     $(this).hide();
   });
 };
