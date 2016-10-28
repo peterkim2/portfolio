@@ -77,8 +77,18 @@
 }
 
 .project-header {
-  background-image: ;
+  background-image: url("../images/project-image-1.jpg");
 }
+
+.project-header-img {
+  width: 20%;
+}
+
+.about-feature-image {
+  border-radius: 50%;
+  max-width: 40%;
+}
+
 @media screen and (min-width: 800px) {
   .icon-menu {
     display: none;

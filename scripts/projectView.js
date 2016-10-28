@@ -14,6 +14,7 @@ projectView.setPreview = function() {
   $('.view-more').on('click', function(event){
     event.preventDefault();
     $(this).parent().find('.article-body *:nth-of-type(n+1)').fadeIn();
+    $(this).hide();
   });
 };
 
