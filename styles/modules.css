@@ -87,6 +87,8 @@
 .about-feature-image {
   border-radius: 50%;
   max-width: 40%;
+  display: block;
+  margin: auto;
 }
 
 @media screen and (min-width: 800px) {
