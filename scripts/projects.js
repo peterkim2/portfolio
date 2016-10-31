@@ -35,6 +35,8 @@ Project.prototype.toHtml = function() {
   var projectSource = $('#project-template').html();
   var templateRender = Handlebars.compile(projectSource);
   return templateRender(this);
+  this.body = marked(this.body);
+  return renderTemplate(this);
 };
 
 /* This sort method is a standard JavaScript Array function

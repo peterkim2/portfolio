@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="images/peter-kim-profile.jpg">
     <script id="project-template" type="text/x-handlebars-template">
       <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
-        <header class="project-header" background=""><!-- <img class="project-header-img" src="{{image}}"> -->
+        <header style="background-image: url({{image}})" class="project-header">
           <h1>{{title}}</h1>
           <div class="byline">
             By <address><a href="{{authorUrl}}">{{author}}</a></address>
@@ -31,15 +31,15 @@
           <img class="profile-image" src="images/peter-kim-profile.jpg">
         </div>
         <h1>Peter Kim</h1>
-        <!-- <h2>Portfolio</h2> -->
+        <h2></h2>
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-home3"> About</a></li>
-          <li class="tab" data-content="projects"><a href="#" class="icon-home3"> Projects</a></li>
-          <li class="tab" data-content="contact"><a href="#" class="icon-home3"> Contact</a></li>
+          <li class="tab" data-content="articles"><a href="#" class=""> Home</a></li>
+          <li class="tab" data-content="about"><a href="#" class=""> About</a></li>
+          <li class="tab" data-content="articles"><a href="#" class=""> Projects</a></li>
+          <li class="tab" data-content="contact"><a href="#" class=""> Contact</a></li>
         </ul>
         <div class="social-icons">
           <ul>
@@ -70,7 +70,7 @@
           <h1>About Me</h1>
         </header>
         <section>
-          <h2>Some of my intrests:</h2>
+          <h2>Some of my interests:</h2>
           <ul>
             <li>Coding</li>
             <li>Sharing what I've learned</li>
@@ -78,14 +78,28 @@
           </ul>
         </section>
       </section>
+      <section id="contact" class="tab-content">
+        <header>
+          <img class="about-feature-image" src="images/peter-kim-profile.jpg">
+          <h1>Say Hi!</h1>
+        </header>
+        <section>
+          <h2>Drop me a line:</h2>
+          <ul>
+            <li><a href="mailto:peterkim23@gmail.com">Email Me</a></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+      </section>
     </main>
     <footer>
-      <nav class="footer-nav">
+      <nav class="main-nav">
         <ul class="footer-ul">
-          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-home3"> About</a></li>
-          <li class="tab" data-content="projects"><a href="#" class="icon-home3"> Projects</a></li>
-          <li class="tab" data-content="contact"><a href="#" class="icon-home3"> Contact</a></li>
+          <li class="tab" data-content="articles"><a href="#" class=""> Home</a></li>
+          <li class="tab" data-content="about"><a href="#" class=""> About</a></li>
+          <li class="tab" data-content="articles"><a href="#" class=""> Projects</a></li>
+          <li class="tab" data-content="contact"><a href="#" class=""> Contact</a></li>
         </ul>
       </nav>
       &copy; 2016
