@@ -31,13 +31,13 @@ projectView.initNewArticlePage = function() {
     $(this).select();
   });
 
-  $('#new-form').on('change', articleView.create);
+  $('#new-form').on('change', projectView.create);
 };
 
 projectView.create = function() {
   $('#article-preview').empty().fadeIn();
 
-  var formArticle = new Article({
+  var formArticle = new Project ({
     title: $('#article-title').val(),
     body: $('#article-body').val(),
     author: $('#article-author').val(),
@@ -54,8 +54,8 @@ projectView.create = function() {
   $('#article-json').val(JSON.stringify(formArticle) + ',');
 };
 
-project.initNewArticlePage();
-projectView.create();
-projectView.render();
+// project.initNewArticlePage();
+// projectView.create();
+// projectView.render();
 projectView.handleMainNav();
 projectView.setPreview();

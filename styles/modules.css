@@ -79,8 +79,14 @@
 }
 
 /*.project-header:hover {
-  background-image: url("../images/project-image-1.jpg");
+  opacity: 0.5;
 }*/
+.project-header {
+  transition: all .1s ease-in-out;
+}
+.project-header:hover {
+  transform: scale(1.05);
+}
 
 /*.project-header-img {
   width: 20%;
@@ -93,6 +99,10 @@
   margin: auto;
   padding-top: .5em;
 }
+
+/*header:hover {
+  opacity: 0.5;
+}*/
 
 @media screen and (min-width: 800px) {
   .icon-menu {
