@@ -18,5 +18,44 @@ projectView.setPreview = function() {
   });
 };
 
+projectView.render = function() {
+  project.forEach(function(a) {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+};
+
+projectView.initNewArticlePage = function() {
+  $('#article-json').on('focus', function() {
+    $(this).select();
+  });
+
+  $('#new-form').on('change', articleView.create);
+};
+
+projectView.create = function() {
+  $('#article-preview').empty().fadeIn();
+
+  var formArticle = new Article({
+    title: $('#article-title').val(),
+    body: $('#article-body').val(),
+    author: $('#article-author').val(),
+    category: $('#article-category').val(),
+    authorUrl: $('#article-author-url').val(),
+    publishedOn: $('#article-published:checked').length ? new Date() : 'draft'
+  });
+  $('#article-preview').append(formArticle.toHtml('#article-template'));
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('#article-json').val(JSON.stringify(formArticle) + ',');
+};
+
+project.initNewArticlePage();
+projectView.create();
+projectView.render();
 projectView.handleMainNav();
 projectView.setPreview();

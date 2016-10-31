@@ -46,6 +46,8 @@
 
 .byline {
   color: #777;
+  display: block;
+  margin: auto;
 }
 
 .byline a {
@@ -76,13 +78,13 @@
   background-color: #dcdfe5;
 }
 
-/*.project-header {
+/*.project-header:hover {
   background-image: url("../images/project-image-1.jpg");
 }*/
 
-.project-header-img {
+/*.project-header-img {
   width: 20%;
-}
+}*/
 
 .about-feature-image {
   border-radius: 50%;
