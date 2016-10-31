@@ -7,6 +7,7 @@ projectView.handleMainNav = function() {
     $('.tab-content').hide();
     $('#' + tab).fadeIn();
   });
+  $('.main-nav .tab:first').click();
 };
 
 projectView.setPreview = function() {

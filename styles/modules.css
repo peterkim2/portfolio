@@ -103,6 +103,10 @@
 /*header:hover {
   opacity: 0.5;
 }*/
+.footer-ul {
+  display: inline-block;
+  padding-top: 1em;
+}
 
 @media screen and (min-width: 800px) {
   .icon-menu {
@@ -123,14 +127,7 @@
   .main-nav:hover ul {
     display: inline-block;
   }
-  .footer-nav {
-    display: inline-block;
-    padding-top: 0.5em;
-    margin: 0;
-  }
-  .footer-ul {
-    display: inline-block;
-  }
+
   .feature-image {
     max-width: 40%;
   }
