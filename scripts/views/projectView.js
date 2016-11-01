@@ -27,34 +27,6 @@ projectView.render = function() {
   });
 };
 
-projectView.initNewArticlePage = function() {
-  $('#article-json').on('focus', function() {
-    $(this).select();
-  });
-
-  $('#new-form').on('change', projectView.create);
-};
-
-projectView.create = function() {
-  $('#article-preview').empty().fadeIn();
-
-  var formArticle = new Project ({
-    title: $('#article-title').val(),
-    body: $('#article-body').val(),
-    author: $('#article-author').val(),
-    category: $('#article-category').val(),
-    authorUrl: $('#article-author-url').val(),
-    publishedOn: $('#article-published:checked').length ? new Date() : 'draft'
-  });
-  $('#article-preview').append(formArticle.toHtml('#article-template'));
-
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-
-  $('#article-json').val(JSON.stringify(formArticle) + ',');
-};
-
 projectView.renderIndexPage = function() {
   Project.allProjects.forEach(function(a) {
     $('#articles').append(a.toHtml('#project-template'));
