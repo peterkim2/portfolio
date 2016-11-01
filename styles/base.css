@@ -42,3 +42,16 @@ a:hover, a:focus {
 a:visited {
   color: #AAA;
 }
+
+label {
+  font-size: 3em;
+}
+
+input {
+  width: 100%;
+
+}
+
+textarea {
+  width: 100%;
+}
