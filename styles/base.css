@@ -27,6 +27,11 @@ article {
   margin: 0 2.5%;
 }
 
+main {
+  margin: auto;
+  width: 95%;
+}
+
 /*LINK STYLES
 =======================================*/
 
@@ -49,7 +54,17 @@ label {
 
 input {
   width: 100%;
+  border: 1px solid #ccc;
+  border-width: 1px;
+}
 
+input:valid, textarea:valid {
+  border-color: #68dc71;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #e04743
+  /*border-width: 3px;*/
 }
 
 textarea {

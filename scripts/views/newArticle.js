@@ -17,6 +17,7 @@ newProject.create = function() {
     title: $('#article-title').val(),
     author: $('#article-author').val(),
     authorUrl: $('#article-author-url').val(),
+    image: $('#feature-image-url').val(),
     body: $('#article-body').val(),
     category: $('#article-category').val(),
     publishedOn: $('#article-published:checked').length ? new Date() : null
