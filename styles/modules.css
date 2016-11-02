@@ -83,6 +83,7 @@
 }*/
 .project-header {
   transition: all .1s ease-in-out;
+  background-size: cover;
 }
 .project-header:hover {
   transform: scale(1.03);
@@ -111,6 +112,7 @@
 .footer-ul li {
   font-size: 1em;
 }
+
 
 @media screen and (min-width: 800px) {
   .icon-menu {
