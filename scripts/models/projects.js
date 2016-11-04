@@ -26,7 +26,7 @@
     });
   };
 
-  Project.fetchAll = function(next) {
+  Project.fetchAll = function(next) { //next is placeholder from Project.fetchAll(projectView.renderIndexPage) from projectView.js
     if(localStorage.projectInfo) {
       $.ajax({
         type: 'HEAD',
@@ -37,7 +37,7 @@
             Project.getAll(next);
           } else {
             Project.loadAll(JSON.parse(localStorage.projectInfo));
-            next();
+            next(); //this invokes projectView.renderIndexPage within Project.fetchAll() from projectView.js line 49
           }
         }
       });
