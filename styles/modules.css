@@ -66,13 +66,9 @@
   float: right;
   padding-top: 1.5em;
 }
-/*.profile-image {
+.profile-image {
   border-radius: 50%;
-  width: 20%;
-  height: 20%;
-  float: right;
-  padding-top: 1.5em;
-}*/
+}
 
 .tab-content {
   background-color: #dcdfe5;
