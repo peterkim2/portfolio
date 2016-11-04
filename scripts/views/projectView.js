@@ -1,10 +1,10 @@
 var projectView = {};
 
 projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
+  $('.main-nav').on('click', '.tab', function(e) {
+    $('.tab-content').hide();
     var tab = $(this).attr('data-content');
     console.log(tab);
-    $('.tab-content').hide();
     $('#' + tab).fadeIn();
   });
   $('.main-nav .tab:first').click();
@@ -14,8 +14,16 @@ projectView.setPreview = function() {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('.view-more').on('click', function(event){
     event.preventDefault();
-    $(this).parent().find('.article-body *:nth-of-type(n+2)').fadeIn();
-    $(this).hide();
+    if($(this).text() === 'View More') {
+      $(this).parent().find('*').fadeIn();
+      $(this).html('Show Less');
+    } else {
+      $('body').animate({
+        scrollTop: ($(this).parent().offset().top)
+      },200);
+      $(this).html('View More');
+      $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+    }
   });
 };
 
@@ -36,5 +44,5 @@ projectView.renderIndexPage = function() {
 // projectView.create();
 // projectView.render();
 projectView.handleMainNav();
-projectView.setPreview();
 Project.fetchAll();
+projectView.setPreview();

@@ -40,13 +40,13 @@ Project.fetchAll = function() {
     });
   }
 };
-$.ajax({
-  url: '/data/projectInfo.json',
-  type: 'GET',
-  success: function(data, message, xhr) {
-    console.log(xhr.getAllResponseHeaders());
-  }
-});
+// $.ajax({
+//   url: '/data/projectInfo.json',
+//   type: 'GET',
+//   success: function(data, message, xhr) {
+//     console.log(xhr.getAllResponseHeaders());
+//   }
+// });
 // var projects = [];
 
 // function Project (options) {
