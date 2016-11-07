@@ -14,7 +14,6 @@
 
   newProject.create = function() {
     $('#article-preview').empty();
-
     var formArticle = new Project ({
       title: $('#article-title').val(),
       author: $('#article-author').val(),
