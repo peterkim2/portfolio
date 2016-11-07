@@ -28,13 +28,13 @@
     });
   };
 
-  // projectView.render = function() {
-  //   project.forEach(function(a) {
-  //     $('pre code').each(function(i, block) {
-  //       hljs.highlightBlock(block);
-  //     });
-  //   });
-  // };
+  projectView.render = function() {
+    project.forEach(function(a) {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  };
 
   projectView.renderIndexPage = function() {
     Project.allProjects.forEach(function(a) {
@@ -43,7 +43,7 @@
     projectView.handleMainNav();
     projectView.setPreview();
   };
-  // project.initNewArticlePage();
+  // project.initNewProjectPage();
   // projectView.create();
   // projectView.render();
   Project.fetchAll(projectView.renderIndexPage);

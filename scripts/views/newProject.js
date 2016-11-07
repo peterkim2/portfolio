@@ -1,6 +1,6 @@
 var newProject = {};
 
-newProject.initNewArticlePage = function() {
+newProject.initNewProjectPage = function() {
   $('.tab-content').show();
   $('#export-field').hide();
   $('#article-json').on('focus', function() {
@@ -32,4 +32,4 @@ newProject.create = function() {
   $('#article-json').val(JSON.stringify(formArticle) + ',');
 };
 
-newProject.initNewArticlePage();
+newProject.initNewProjectPage();
