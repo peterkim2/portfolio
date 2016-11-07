@@ -15,7 +15,7 @@
     $('.article-body *:nth-of-type(n+2)').hide();
     $('.view-more').on('click', function(event){
       event.preventDefault();
-      if($(this).text() === 'View More') {
+      if($(this).html() === 'View More') {
         $(this).parent().find('*').fadeIn();
         $(this).html('Show Less');
       } else {
