@@ -79,14 +79,13 @@
 }*/
 .project-header {
   transition: all .1s ease-in-out;
-  background-size: cover;
+  background-size: 100%;
 }
 .project-header:hover {
   transform: scale(1.03);
 }
-
-/*.project-header-img {
-  width: 20%;
+/*#header:backgound-image {
+  width: 50%;
 }*/
 
 .about-feature-image {

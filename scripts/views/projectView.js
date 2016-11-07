@@ -43,6 +43,8 @@
     projectView.handleMainNav();
     projectView.setPreview();
   };
+  // newProject.create();
+
   // project.initNewProjectPage();
   // projectView.create();
   // projectView.render();
