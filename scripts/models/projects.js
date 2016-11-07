@@ -11,12 +11,7 @@
     this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
     this.body = marked(this.body);
     return templateRender(this);
-
-    // var projectSource = $('#project-template').html(); refactor
-    // return renderTemplate(this); refactor
   };
-
-  // Project.allProjects = [];
 
   Project.loadAll = function(inputData) {
     Project.allProjects = inputData.sort(function(a,b) {
@@ -26,7 +21,7 @@
     });
   };
 
-  Project.fetchAll = function(next) { //next is placeholder from Project.fetchAll(projectView.renderIndexPage) from projectView.js
+  Project.fetchAll = function(next) { //next is placeholder fromProject.fetchAll(projectView.renderIndexPage) from projectView.js
     if(localStorage.projectInfo) {
       $.ajax({
         type: 'HEAD',
@@ -56,15 +51,3 @@
   };
   module.Project = Project;
 })(window);
-//     var parsedData = JSON.parse(localStorage.projectInfo);
-//     Project.loadAll(parsedData);
-//     projectView.renderIndexPage();
-//   } else {
-//     $.getJSON('/../data/projectInfo.json' , function(data) {
-//       var stringify = JSON.stringify(data);
-//       localStorage.setItem('projectInfo', stringify);
-//       Project.loadAll(data);
-//       projectView.renderIndexPage();
-//     });
-//   }
-// };

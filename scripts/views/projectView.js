@@ -15,7 +15,7 @@
     $('.article-body *:nth-of-type(n+2)').hide();
     $('.view-more').on('click', function(event){
       event.preventDefault();
-      if($(this).text() === 'View More') {
+      if($(this).html() === 'View More') {
         $(this).parent().find('*').fadeIn();
         $(this).html('Show Less');
       } else {
@@ -28,13 +28,13 @@
     });
   };
 
-  // projectView.render = function() {
-  //   project.forEach(function(a) {
-  //     $('pre code').each(function(i, block) {
-  //       hljs.highlightBlock(block);
-  //     });
-  //   });
-  // };
+  projectView.render = function() {
+    project.forEach(function(a) {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  };
 
   projectView.renderIndexPage = function() {
     Project.allProjects.forEach(function(a) {
@@ -43,7 +43,7 @@
     projectView.handleMainNav();
     projectView.setPreview();
   };
-  // project.initNewArticlePage();
+  // project.initNewProjectPage();
   // projectView.create();
   // projectView.render();
   Project.fetchAll(projectView.renderIndexPage);

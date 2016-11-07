@@ -1,12 +1,16 @@
-articleView.renderAdminPage = function() {
-  var statsRender = Handlebars.compile($('#stats-template').html());
-  $('#blog-stats .articles').text(Article.allArticles.length);
+(function(module) {
+  articleView.renderAdminPage = function() {
+    var statsRender = Handlebars.compile($('#stats-template').html());
+    $('#blog-stats .articles').text(Article.allArticles.length);
 
-  $('#blog-stats .words').text(Article.numWordsAll());
+    $('#blog-stats .words').text(Article.numWordsAll());
 
-  Article.numWordsByAuthor().forEach(function(numWordsObj) {
-    $('.author-stats').append(statsRender(numWordsObj));
-  });
-};
+    Article.numWordsByAuthor().forEach(function(numWordsObj) {
+      $('.author-stats').append(statsRender(numWordsObj));
+    });
+  };
 
-Article.fetchAll(articleView.renderAdminPage);
+  Article.fetchAll(articleView.renderAdminPage);
+
+  module.adminPage = adminPage;
+})(window);
