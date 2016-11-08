@@ -1,16 +1,6 @@
 (function(module) {
   var projectView = {};
 
-  projectView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function(e) {
-      $('.tab-content').hide();
-      var tab = $(this).attr('data-content');
-      console.log(tab);
-      $('#' + tab).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  };
-
   projectView.setPreview = function() {
     $('.article-body *:nth-of-type(n+2)').hide();
     $('.view-more').on('click', function(event){
@@ -40,7 +30,6 @@
     Project.allProjects.forEach(function(a) {
       $('#articles').append(a.toHtml('#project-template'));
     });
-    projectView.handleMainNav();
     projectView.setPreview();
   };
   // newProject.create();
