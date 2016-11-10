@@ -1,26 +1,22 @@
 (function(module) {
-  var repos = {};
+  var reposObj = {};
 
-  repos.allRepos = [];
-
-  repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/peterkim2/repos',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data, message, xhr) {
-        repos.allRepos = data;
-        console.log(data);
-        callback();
-      }
+  reposObj.requestRepos = function(callback) {
+    $.when(
+      $.get('/github/users/peterkim2/repos', function(data) {
+        reposObj.allRepos = data;
+      }),
+      $.get('/github/users/peterkim2/followers', function(data) {
+        reposObj.followers = data;
+      })
+    ).done(callback);
+  };
+  
+  reposObj.withTheAttribute = function(attr) {
+    return reposObj.allRepos.filter(function(aRepo) {
+      return aRepo[attr];
     });
   };
 
-  repos.withTheAttribute = function(myAttr) {
-    return repos.allRepos.filter(function(aRepo) {
-      return aRepo[myAttr];
-    });
-  };
-
-  module.repos = repos;
+  module.reposObj = reposObj;
 })(window);
