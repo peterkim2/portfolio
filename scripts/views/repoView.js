@@ -2,15 +2,20 @@
   var repoView = {};
 
   var repoCompiler = Handlebars.compile($('#repo-template').html());
+  var followersCompiler = Handlebars.compile($('#followers-template').text());
 
   repoView.renderRepos = function() {
     $('#about .projects-stats').empty().append(
-      repos.withTheAttribute('name')
+      reposObj.withTheAttribute('name')
       .map(repoCompiler)
+    );
+    $('#about .followers').empty().append(
+      reposObj.withTheAttribute('followers')
+      .map(followersCompiler)
     );
   };
 
-  repos.requestRepos(repoView.renderRepos);
+  reposObj.requestRepos(repoView.renderRepos);
 
   module.repoView = repoView;
 })(window);
