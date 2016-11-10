@@ -10,8 +10,7 @@
       .map(repoCompiler)
     );
     $('#about .followers').empty().append(
-      reposObj.withTheAttribute('followers')
-      .map(followersCompiler)
+      reposObj.followers.map(followersCompiler)
     );
   };
 
